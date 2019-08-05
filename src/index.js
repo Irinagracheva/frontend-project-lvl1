@@ -11,9 +11,10 @@ const findGcd = (number1, number2) => {
 
 const gameLogic = (gameType) => {
   const number1 = Math.round(Math.random() * 100);
-  let gameAnswer = 0;
-  let question = number1;
+  let gameAnswer = '';
+  let question = '';
   if (gameType === 'even') {
+    question = number1;
     gameAnswer = (number1 % 2 === 0) ? 'yes' : 'no';
   }
   const strOperator = '+-*';
@@ -40,6 +41,18 @@ const gameLogic = (gameType) => {
     question = `${number1} ${secondNumber}`;
     gameAnswer = String(findGcd(number1, secondNumber));
   }
+  if (gameType === 'prog') {
+    const diff = 1 + Math.round(Math.random() * 9);
+    const hiddenNumberIndex = Math.round(Math.random() * 9);
+    let nextNumber = number1;
+    for (let i = 0; i < 11; i += 1) {
+      question = (i !== hiddenNumberIndex) ? `${question} ${nextNumber}` : `${question} .. `;
+      if (i === hiddenNumberIndex) {
+        gameAnswer = String(nextNumber);
+      }
+      nextNumber += diff;
+    }
+  }
   return [question, gameAnswer];
 };
 
@@ -53,6 +66,9 @@ export default (gameName) => {
   }
   if (gameName === 'gcd') {
     console.log('Find the greatest common divisor of given numbers.\n');
+  }
+  if (gameName === 'prog') {
+    console.log('What number is missing in the progression?\n');
   }
   const userName = readlineSync.question('May I have your name?');
   console.log(`Hello, ${userName}! \n`);
