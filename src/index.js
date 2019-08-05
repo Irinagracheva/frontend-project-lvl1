@@ -36,7 +36,7 @@ export default (gameName) => {
   }
   if (gameName === 'calc') {
     console.log('What is the result of the expression?\n');
-  }  
+  }
   const userName = readlineSync.question('May I have your name?');
   console.log(`Hello, ${userName}! \n`);
   let points = 0;
