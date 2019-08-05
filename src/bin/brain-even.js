@@ -1,4 +1,5 @@
 #!/usr/bin/env node
 import game from '..';
 
-game();
+const even = game('even');
+console.log(even);
