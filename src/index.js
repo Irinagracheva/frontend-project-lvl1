@@ -9,6 +9,18 @@ const findGcd = (number1, number2) => {
   return (num1 > num2) ? findGcd(num1 - num2, num2) : findGcd(num1, num2 - num1);
 };
 
+const isPrime = (num) => {
+  if (num < 3) {
+    return true;
+  }
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
 const gameLogic = (gameType) => {
   const number1 = Math.round(Math.random() * 100);
   let gameAnswer = '';
@@ -53,22 +65,33 @@ const gameLogic = (gameType) => {
       nextNumber += diff;
     }
   }
+  if (gameType === 'prime') {
+    question = number1;
+    gameAnswer = isPrime(number1) ? 'yes' : 'no';
+  }
   return [question, gameAnswer];
 };
 
 export default (gameName) => {
   console.log('Welcome to the Brain Games!');
-  if (gameName === 'even') {
-    console.log('Answer "yes" if number even otherwise answer "no".\n');
-  }
-  if (gameName === 'calc') {
-    console.log('What is the result of the expression?\n');
-  }
-  if (gameName === 'gcd') {
-    console.log('Find the greatest common divisor of given numbers.\n');
-  }
-  if (gameName === 'prog') {
-    console.log('What number is missing in the progression?\n');
+  switch (gameName) {
+    case ('even'):
+      console.log('Answer "yes" if number even otherwise answer "no".\n');
+      break;
+    case ('calc'):
+      console.log('What is the result of the expression?\n');
+      break;
+    case ('gcd'):
+      console.log('Find the greatest common divisor of given numbers.\n');
+      break;
+    case ('prog'):
+      console.log('What number is missing in the progression?\n');
+      break;
+    case ('prime'):
+      console.log('Answer "yes" if given number is prime. Otherwise answer "no".\n');
+      break;
+    default:
+      console.log('There is a mistake in program!');
   }
   const userName = readlineSync.question('May I have your name?');
   console.log(`Hello, ${userName}! \n`);
