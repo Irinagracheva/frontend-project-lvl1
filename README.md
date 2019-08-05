@@ -6,3 +6,5 @@
 [![Build Status](https://travis-ci.org/Irinagracheva/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Irinagracheva/frontend-project-lvl1)
 
 [![asciicast](https://asciinema.org/a/kHdsTrzd55JiPieZiVfXx52EQ.svg)](https://asciinema.org/a/kHdsTrzd55JiPieZiVfXx52EQ)
+
+[![asciicast](https://asciinema.org/a/3Xbf62WvaeLsXezmnMtr4apuy.svg)](https://asciinema.org/a/3Xbf62WvaeLsXezmnMtr4apuy)
