@@ -1,5 +1,14 @@
 import readlineSync from 'readline-sync';
 
+const findGcd = (number1, number2) => {
+  const num1 = Math.abs(number1);
+  const num2 = Math.abs(number2);
+  if (num1 === num2) {
+    return num1;
+  }
+  return (num1 > num2) ? findGcd(num1 - num2, num2) : findGcd(num1, num2 - num1);
+};
+
 const gameLogic = (gameType) => {
   const number1 = Math.round(Math.random() * 100);
   let gameAnswer = 0;
@@ -26,6 +35,11 @@ const gameLogic = (gameType) => {
         gameAnswer = 'There is a mistake in program!';
     }
   }
+  if (gameType === 'gcd') {
+    const secondNumber = Math.round(Math.random() * 100);
+    question = `${number1} ${secondNumber}`;
+    gameAnswer = String(findGcd(number1, secondNumber));
+  }
   return [question, gameAnswer];
 };
 
@@ -36,6 +50,9 @@ export default (gameName) => {
   }
   if (gameName === 'calc') {
     console.log('What is the result of the expression?\n');
+  }
+  if (gameName === 'gcd') {
+    console.log('Find the greatest common divisor of given numbers.\n');
   }
   const userName = readlineSync.question('May I have your name?');
   console.log(`Hello, ${userName}! \n`);
