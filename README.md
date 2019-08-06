@@ -6,13 +6,13 @@
 [![Build Status](https://travis-ci.org/Irinagracheva/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Irinagracheva/frontend-project-lvl1)
 
 ## brain-even 
-<a href="https://asciinema.org/a/kHdsTrzd55JiPieZiVfXx52EQ" target="_blank"><img src="https://asciinema.org/a/kHdsTrzd55JiPieZiVfXx52EQ.svg" width="400"/></a>
+<a href="https://asciinema.org/a/810iXRE1wxqkL57nCkZRYVoqv" target="_blank"><img src="https://asciinema.org/a/810iXRE1wxqkL57nCkZRYVoqv.svg" width="400"/></a>
 
 ## brain-calc
-<a href="https://asciinema.org/a/3Xbf62WvaeLsXezmnMtr4apuy" target="_blank"><img src="https://asciinema.org/a/3Xbf62WvaeLsXezmnMtr4apuy.svg" width="400"/></a>
+<a href="https://asciinema.org/a/8nW8T7nqZcBqxExNUlp9mp07J" target="_blank"><img src="https://asciinema.org/a/8nW8T7nqZcBqxExNUlp9mp07J.svg" width="400"/></a>
 
 ## brain-gcd
-<a href="https://asciinema.org/a/30MpaU9PyiAlnkBv3iSjvZOyL" target="_blank"><img src="https://asciinema.org/a/30MpaU9PyiAlnkBv3iSjvZOyL.svg" width="400"/></a>
+<a href="https://asciinema.org/a/sCGwVAoOcRBVK89yZonGmY3a5" target="_blank"><img src="https://asciinema.org/a/sCGwVAoOcRBVK89yZonGmY3a5.svg" width="400" /></a>
 
 ## brain-progression
 <a href="https://asciinema.org/a/We4lzx6JDY0cQLtGiWsMeFPBS" target="_blank"><img src="https://asciinema.org/a/We4lzx6JDY0cQLtGiWsMeFPBS.svg" width="400"/></a>
