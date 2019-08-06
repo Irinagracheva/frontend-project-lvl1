@@ -1,8 +1,9 @@
 {
   "name": "project-bg",
   "version": "1.0.0",
-  "description": "",
-  "main": "",
+  "description": "console games with some mathematics",
+  "keywords": ["brain-games", "console game"],
+  "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
