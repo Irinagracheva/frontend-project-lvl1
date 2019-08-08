@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import game from '..';
+import prog from '../games/prog';
 
-const prog = game('prog');
-console.log(prog);
+prog();

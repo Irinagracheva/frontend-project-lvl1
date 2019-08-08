@@ -1,4 +1,8 @@
-export default () => {
+import { userGreeting, game } from '..';
+
+const progRule = 'What number is missing in the progression?\n';
+
+const progFunc = () => {
   const number1 = Math.round(Math.random() * 9);
   const diff = 1 + Math.round(Math.random() * 9);
   const hiddenNumberIndex = Math.round(Math.random() * 9);
@@ -13,4 +17,10 @@ export default () => {
     nextNumber += diff;
   }
   return [question, gameAnswer];
+};
+
+export default () => {
+  const userName = userGreeting(progRule);
+  const result = game(progFunc, userName);
+  console.log(result);
 };

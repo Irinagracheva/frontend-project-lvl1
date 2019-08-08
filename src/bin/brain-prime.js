@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import game from '..';
+import prime from '../games/prime';
 
-const prime = game('prime');
-console.log(prime);
+prime();

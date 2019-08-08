@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import game from '..';
+import gcd from '../games/gcd';
 
-const gcd = game('gcd');
-console.log(gcd);
+gcd();
