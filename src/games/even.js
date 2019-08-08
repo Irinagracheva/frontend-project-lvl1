@@ -1,4 +1,4 @@
-import { userGreeting, game } from '..';
+import game from '..';
 
 const evenRule = 'Answer "yes" if number even otherwise answer "no".\n';
 
@@ -9,7 +9,6 @@ const evenFunc = () => {
 };
 
 export default () => {
-  const userName = userGreeting(evenRule);
-  const result = game(evenFunc, userName);
+  const result = game(evenRule, evenFunc);
   console.log(result);
 };

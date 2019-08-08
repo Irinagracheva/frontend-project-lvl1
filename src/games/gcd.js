@@ -1,4 +1,4 @@
-import { userGreeting, game } from '..';
+import game from '..';
 
 const gcdRule = 'Find the greatest common divisor of given numbers.\n';
 
@@ -20,7 +20,6 @@ const gcdFunc = () => {
 };
 
 export default () => {
-  const userName = userGreeting(gcdRule);
-  const result = game(gcdFunc, userName);
+  const result = game(gcdRule, gcdFunc);
   console.log(result);
 };

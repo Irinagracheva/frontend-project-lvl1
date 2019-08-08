@@ -1,4 +1,4 @@
-import { userGreeting, game } from '..';
+import game from '..';
 
 const progRule = 'What number is missing in the progression?\n';
 
@@ -20,7 +20,6 @@ const progFunc = () => {
 };
 
 export default () => {
-  const userName = userGreeting(progRule);
-  const result = game(progFunc, userName);
+  const result = game(progRule, progFunc);
   console.log(result);
 };

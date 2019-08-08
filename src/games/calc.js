@@ -1,4 +1,4 @@
-import { userGreeting, game } from '..';
+import game from '..';
 
 const calcRule = 'What is the result of the expression?\n';
 
@@ -26,7 +26,6 @@ const calcFunc = () => {
 };
 
 export default () => {
-  const userName = userGreeting(calcRule);
-  const result = game(calcFunc, userName);
+  const result = game(calcRule, calcFunc);
   console.log(result);
 };

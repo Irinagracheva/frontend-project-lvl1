@@ -1,14 +1,10 @@
 import readlineSync from 'readline-sync';
 
-export const userGreeting = (gameRule) => {
+export default (gameRule, gameLogic) => {
   console.log('Welcome to the Brain Games!');
   console.log(gameRule);
   const userName = readlineSync.question('May I have your name?');
   console.log(`Hello, ${userName}! \n`);
-  return userName;
-};
-
-export const game = (gameLogic, userName) => {
   let points = 0;
   while (points < 3) {
     const [statement, correctAnswer] = gameLogic();

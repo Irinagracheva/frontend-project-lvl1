@@ -1,4 +1,4 @@
-import { userGreeting, game } from '..';
+import game from '..';
 
 const primeRule = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
 
@@ -21,7 +21,6 @@ const primeFunc = () => {
 };
 
 export default () => {
-  const userName = userGreeting(primeRule);
-  const result = game(primeFunc, userName);
+  const result = game(primeRule, primeFunc);
   console.log(result);
 };
