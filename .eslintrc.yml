@@ -15,5 +15,4 @@ parserOptions:
   ecmaVersion: 2018
   sourceType: module
 rules: 
-  no-console: 0
-  linebreak-style: 0
+  no-console: 0  
