@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "console games with some mathematics",
   "keywords": ["brain-games", "console game"],
-  "main": "dist/index.js",
+  "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
