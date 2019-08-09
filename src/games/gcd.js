@@ -1,6 +1,7 @@
 import game from '..';
+import random from '../utils';
 
-const gcdRule = 'Find the greatest common divisor of given numbers.\n';
+const gcdRule = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (number1, number2) => {
   const num1 = Math.abs(number1);
@@ -12,14 +13,13 @@ const findGcd = (number1, number2) => {
 };
 
 const gcdFunc = () => {
-  const firstNumber = Math.round(Math.random() * 100);
-  const secondNumber = Math.round(Math.random() * 100);
+  const firstNumber = random(0, 100);
+  const secondNumber = random(0, 100);
   const question = `${firstNumber} ${secondNumber}`;
   const gameAnswer = String(findGcd(firstNumber, secondNumber));
   return [question, gameAnswer];
 };
 
 export default () => {
-  const result = game(gcdRule, gcdFunc);
-  console.log(result);
+  game(gcdRule, gcdFunc);
 };

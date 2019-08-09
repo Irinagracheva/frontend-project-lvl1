@@ -1,9 +1,13 @@
 import game from '..';
+import random from '../utils';
 
-const primeRule = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
+const primeRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
-  if (num < 3) {
+  if (num < 2) {
+    return false;
+  }
+  if (num === 2) {
     return true;
   }
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
@@ -15,12 +19,11 @@ const isPrime = (num) => {
 };
 
 const primeFunc = () => {
-  const number1 = Math.round(Math.random() * 100);
-  const gameAnswer = isPrime(number1) ? 'yes' : 'no';
-  return [number1, gameAnswer];
+  const question = random(0, 100);
+  const gameAnswer = isPrime(question) ? 'yes' : 'no';
+  return [question, gameAnswer];
 };
 
 export default () => {
-  const result = game(primeRule, primeFunc);
-  console.log(result);
+  game(primeRule, primeFunc);
 };

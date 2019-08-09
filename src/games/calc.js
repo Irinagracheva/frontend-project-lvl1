@@ -1,12 +1,13 @@
 import game from '..';
+import random from '../utils';
 
-const calcRule = 'What is the result of the expression?\n';
+const calcRule = 'What is the result of the expression?';
+const strOperator = '+-*';
 
 const calcFunc = () => {
-  const strOperator = '+-*';
-  const number1 = Math.round(Math.random() * 100);
-  const number2 = Math.round(Math.random() * 100);
-  const operator = strOperator[Math.round(Math.random() * 2)];
+  const number1 = random(0, 100);
+  const number2 = random(0, 100);
+  const operator = strOperator[random(0, 2)];
   const question = `${number1} ${operator} ${number2}`;
   let gameAnswer = '';
   switch (operator) {
@@ -26,6 +27,5 @@ const calcFunc = () => {
 };
 
 export default () => {
-  const result = game(calcRule, calcFunc);
-  console.log(result);
+  game(calcRule, calcFunc);
 };

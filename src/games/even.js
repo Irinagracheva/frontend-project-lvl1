@@ -1,14 +1,16 @@
 import game from '..';
+import random from '../utils';
 
-const evenRule = 'Answer "yes" if number even otherwise answer "no".\n';
+const evenRule = 'Answer "yes" if number even otherwise answer "no".';
+
+const isEven = num => num % 2 === 0;
 
 const evenFunc = () => {
-  const number1 = Math.round(Math.random() * 100);
-  const gameAnswer = (number1 % 2 === 0) ? 'yes' : 'no';
-  return [number1, gameAnswer];
+  const question = random(0, 100);
+  const gameAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, gameAnswer];
 };
 
 export default () => {
-  const result = game(evenRule, evenFunc);
-  console.log(result);
+  game(evenRule, evenFunc);
 };
