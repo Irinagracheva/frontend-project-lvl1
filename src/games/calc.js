@@ -7,7 +7,7 @@ const strOperator = '+-*';
 const calcFunc = () => {
   const number1 = random(0, 100);
   const number2 = random(0, 100);
-  const operator = strOperator[random(0, 2)];
+  const operator = strOperator[random(0, strOperator.length - 1)];
   const question = `${number1} ${operator} ${number2}`;
   let gameAnswer = '';
   switch (operator) {
