@@ -15,12 +15,12 @@ const isPrime = (num) => {
   return true;
 };
 
-const primeFunc = () => {
+const primeData = () => {
   const question = random(0, 100);
   const gameAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, gameAnswer];
 };
 
 export default () => {
-  game(primeRule, primeFunc);
+  game(primeRule, primeData);
 };

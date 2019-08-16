@@ -4,7 +4,7 @@ import random from '../utils';
 const calcRule = 'What is the result of the expression?';
 const strOperator = '+-*';
 
-const calcFunc = () => {
+const calcData = () => {
   const number1 = random(0, 100);
   const number2 = random(0, 100);
   const operator = strOperator[random(0, strOperator.length - 1)];
@@ -27,5 +27,5 @@ const calcFunc = () => {
 };
 
 export default () => {
-  game(calcRule, calcFunc);
+  game(calcRule, calcData);
 };
